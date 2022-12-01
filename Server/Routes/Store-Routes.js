@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const Store = require("../Model/Produce");
+const schnucksControllers = require("../Controllers/Schnucks-Controllers");
+router.get("/get", schnucksControllers.getAllProduce );
+router.post("/update", schnucksControllers.addproduce);
+router.get("/get/:id", schnucksControllers.getById);
+router.put("/update/:id", schnucksControllers.updateProduce);
+router.delete("/delete/:id", schnucksControllers.deleteProduce);
+module.exports = router;
